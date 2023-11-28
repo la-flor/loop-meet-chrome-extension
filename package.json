@@ -1,11 +1,11 @@
 {
-  "name": "loop-meet",
+  "name": "loop-meet-chrome-extension",
   "version": "5.0.4",
   "description": "A chrome extension to assist with scheduling chats, phone calls, and meetups",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/la-flor/loop-meet.git"
+    "url": "git@github.com:la-flor/loop-meet-chrome-extension.git"
   },
   "scripts": {
     "build": "node utils/build.js",
