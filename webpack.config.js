@@ -40,10 +40,6 @@ var options = {
   entry: {
     options: path.join(__dirname, 'src', 'pages', 'Options', 'index.jsx'),
     popup: path.join(__dirname, 'src', 'pages', 'Popup', 'index.jsx'),
-    contentScript: path.join(__dirname, 'src', 'pages', 'Content', 'index.js'),
-  },
-  chromeExtensionBoilerplate: {
-    notHotReload: ['contentScript'],
   },
   output: {
     filename: '[name].bundle.js',
@@ -150,15 +146,6 @@ var options = {
               })
             );
           },
-        },
-      ],
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'src/pages/Content/content.styles.css',
-          to: path.join(__dirname, 'build'),
-          force: true,
         },
       ],
     }),
