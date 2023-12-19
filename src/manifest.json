@@ -2,7 +2,6 @@
   "manifest_version": 3,
   "name": "Loop-Meet",
   "description": "A chrome extension to assist with scheduling meetings and meetups",
-  "options_page": "options.html",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon-34.png"
