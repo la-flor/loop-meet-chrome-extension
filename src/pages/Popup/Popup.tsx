@@ -44,7 +44,7 @@ const Popup = () => {
       <header className="App-header">
         <h1>Loop-Meet</h1>
         {lat && long && !error && <UsersLocation lat={lat} long={long} />}
-        <div>Error: {error}</div>
+        {error && <div>Error: {error}</div>}
       </header>
     </div>
   );
