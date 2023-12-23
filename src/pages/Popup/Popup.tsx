@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 // import Greetings from '../../containers/Greetings/Greetings';
 import './Popup.css';
+import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 const UsersLocation = ({ lat, long }: { lat: string; long: string }) => {
   const [useLocation, setUseLocation] = useState<boolean>(false);
@@ -12,6 +18,7 @@ const UsersLocation = ({ lat, long }: { lat: string; long: string }) => {
         <>
           <div>Lat: {lat ?? 'Unavailable'}</div>
           <div>Long: {long ?? 'Unavailable'}</div>
+          <div>Your Timezone: {dayjs.tz.guess()}</div>
         </>
       ) : null}
     </div>
